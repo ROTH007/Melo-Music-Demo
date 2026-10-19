@@ -92,3 +92,79 @@ export const IconVolume = (props) => (
     <path d="M18.5 7a7.5 7.5 0 0 1 0 10" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
   </svg>
 )
+
+export const IconShuffle = (props) => (
+  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" {...props}>
+    <path
+      d="M3 6h3.5a4 4 0 0 1 3.2 1.6L15 16a4 4 0 0 0 3.2 1.6H21M3 18h3.5a4 4 0 0 0 3.2-1.6l.6-.8M14.5 7.6a4 4 0 0 1 3.2-1.6H21"
+      stroke="currentColor"
+      strokeWidth="1.7"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path d="M18.5 3 21.5 6l-3 3M18.5 21 21.5 18l-3-3" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+)
+
+export const IconPlus = (props) => (
+  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" {...props}>
+    <path d="M12 5v14M5 12h14" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+  </svg>
+)
+
+export const IconCheck = (props) => (
+  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" {...props}>
+    <path d="m4 12 6 6L20 6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+)
+
+export const IconBell = (props) => (
+  <svg viewBox="0 0 24 24" width="19" height="19" fill="none" {...props}>
+    <path
+      d="M6 10a6 6 0 1 1 12 0c0 3.4.9 5 2 6H4c1.1-1 2-2.6 2-6Z"
+      stroke="currentColor"
+      strokeWidth="1.7"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path d="M9.5 19a2.5 2.5 0 0 0 5 0" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+  </svg>
+)
+
+export const IconUser = (props) => (
+  <svg viewBox="0 0 24 24" width="19" height="19" fill="none" {...props}>
+    <circle cx="12" cy="8.5" r="3.5" stroke="currentColor" strokeWidth="1.7" />
+    <path d="M4.5 20c1.4-3.4 4.3-5.5 7.5-5.5s6.1 2.1 7.5 5.5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+  </svg>
+)
+
+export const IconPencil = (props) => (
+  <svg viewBox="0 0 24 24" width="15" height="15" fill="none" {...props}>
+    <path
+      d="M4 20h4l10.5-10.5a2.1 2.1 0 0 0-3-3L5 17v3Z"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+)
+
+export const IconClock = (props) => (
+  <svg viewBox="0 0 24 24" width="17" height="17" fill="none" {...props}>
+    <circle cx="12" cy="12" r="8.5" stroke="currentColor" strokeWidth="1.7" />
+    <path d="M12 7.5V12l3 2" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+)
+
+export const IconMusicNote = (props) => (
+  <svg viewBox="0 0 24 24" width="17" height="17" fill="none" {...props}>
+    <path
+      d="M9 18V6l11-2v12M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm11-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+      stroke="currentColor"
+      strokeWidth="1.7"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+)

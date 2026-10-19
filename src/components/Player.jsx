@@ -8,7 +8,7 @@ const formatTime = (sec) => {
   return `${m}:${s}`
 }
 
-export default function Player({ song, isPlaying, setIsPlaying, onNext, onPrev }) {
+export default function Player({ song, isPlaying, setIsPlaying, onNext, onPrev, onProgress }) {
   const audioRef = useRef(null)
   const [currentTime, setCurrentTime] = useState(0)
   const [duration, setDuration] = useState(0)
@@ -87,6 +87,11 @@ export default function Player({ song, isPlaying, setIsPlaying, onNext, onPrev }
       // Some browsers throw if called at the wrong time — safe to ignore.
     }
   }, [duration, currentTime])
+
+  // Share live progress with the parent (used by the Now Playing panel)
+  useEffect(() => {
+    onProgress?.(currentTime, duration)
+  }, [currentTime, duration, onProgress])
 
   const seek = (e) => {
     const time = Number(e.target.value)
