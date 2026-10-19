@@ -265,14 +265,55 @@ body {
   padding: 0 20px;
 }
 
-.player-left { display: flex; align-items: center; gap: 14px; min-width: 0; }
-.player-cover {
-  width: 56px;
-  height: 56px;
-  border-radius: 8px;
-  object-fit: cover;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+.player-left { display: flex; align-items: center; gap: 16px; min-width: 0; }
+
+/* Vinyl-record cover art: a round disc with grooves and a center hole that
+   spins while playing and freezes mid-turn (not resets) when paused. */
+.vinyl {
+  position: relative;
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #0c0c0c;
+  box-shadow:
+    0 4px 14px rgba(0, 0, 0, 0.55),
+    0 0 0 2px #1a1a1a,
+    inset 0 0 0 7px #0c0c0c,
+    inset 0 0 0 8px #262626,
+    inset 0 0 0 13px #0c0c0c,
+    inset 0 0 0 14px #262626;
+  animation: vinyl-spin 2.6s linear infinite;
+  animation-play-state: paused;
 }
+.vinyl-spinning { animation-play-state: running; }
+
+.vinyl-cover {
+  position: absolute;
+  inset: 7px;
+  width: calc(100% - 14px);
+  height: calc(100% - 14px);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.vinyl-hole {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #0c0c0c;
+  border: 1.5px solid #000;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes vinyl-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 .player-meta { min-width: 0; }
 .player-meta .lib-title { font-size: 14px; }
 

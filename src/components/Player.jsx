@@ -109,7 +109,10 @@ export default function Player({ song, isPlaying, setIsPlaying, onNext, onPrev }
       <div className="player-left">
         {song ? (
           <>
-            <img src={song.cover} alt={song.title} className="player-cover" />
+            <div className={`vinyl ${isPlaying ? 'vinyl-spinning' : ''}`}>
+              <img src={song.cover} alt={song.title} className="vinyl-cover" />
+              <span className="vinyl-hole" />
+            </div>
             <div className="player-meta">
               <div className="lib-title">{song.title}</div>
               <div className="lib-sub">{song.artist}</div>
